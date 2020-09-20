@@ -1,7 +1,7 @@
 const checkCoords = require('../helpers/checkCoords');
 
 let errors = [];
-const roverCoors = ['N', 'S', 'E', 'W'];
+const roverCoords = ['N', 'S', 'E', 'W'];
 const correctPlateauCoordsValues = '5 5';
 const correctPlateauCoordsResults = 'correctData';
 const incorrectPlateauCoordsValues = '5 S';
@@ -34,7 +34,7 @@ test('Checks if the rover initial position includes the correct data type of val
       correctRoverCoordsValues,
       'rover one initial position',
       errors,
-      roverCoors
+      roverCoords
     )
   ).toEqual(correctRoverCoordsResults);
 });
@@ -44,7 +44,7 @@ test('Checks if the rover initial position includes the correct data type of val
       incorrectRoverCoordsValues,
       'rover one initial position',
       errors,
-      roverCoors
+      roverCoords
     )
   ).toEqual(incorrectRoverCoordsResults);
 });
