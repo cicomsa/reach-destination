@@ -1,5 +1,14 @@
 const init = (value, key, errors, data) => {
-  const splitValue = value.split(' ');
+  let splitValue;
+
+  if (value.includes(' ')) {
+    splitValue = value.split(' ');
+  } else {
+    if (!errors.includes(`"${value}" is incorrect data for the ${key}.`))
+      errors.push(`"${value}" is incorrect data for the ${key}.`);
+
+    return errors;
+  }
 
   splitValue.map((el, i) => {
     if (i === 0 || i === 1) {
