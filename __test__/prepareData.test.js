@@ -1,4 +1,4 @@
-const setData = require('../helpers/prepareData');
+const prepareData = require('../helpers/prepareData');
 
 const input = '5 5/n1 2 N/nLMLMLMLMM/n3 3 E/nMMRMMRMRRM';
 const result = {
@@ -16,5 +16,5 @@ const result = {
 };
 
 test('Checks if the prepareData function returns expected result', () => {
-  expect(setData(input)).toEqual(result);
+  expect(prepareData(input)).toEqual(result);
 });
