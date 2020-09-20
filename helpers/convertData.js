@@ -10,8 +10,6 @@ const init = (input) => {
     input.rover_two.initial_position
   );
 
-  console.log(input);
-
   return input;
 };
 

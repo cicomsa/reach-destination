@@ -1,6 +1,6 @@
 const prepareData = require('../helpers/prepareData');
 
-const input = '5 5/n1 2 N/nLMLMLMLMM/n3 3 E/nMMRMMRMRRM';
+const input = '5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM';
 const result = {
   plateau_coords: '5 5',
   rover_one: {

@@ -1,5 +1,5 @@
 const init = (input) => {
-  const splitInput = input.split('/n');
+  const splitInput = input.split('\n');
   const data = {
     plateau_coords: splitInput[0],
     rover_one: {
