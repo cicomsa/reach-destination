@@ -28,7 +28,7 @@ test('Checks if the plateau coordinates includes the correct data type of values
   ).toEqual(incorrectPlateauCoordsResults);
 });
 
-test('Checks if the rover initial position includes the correct data type of values -  returns true', () => {
+test('Checks if the rover initial position includes the correct data type of values - returns true', () => {
   expect(
     checkCoords(
       correctRoverCoordsValues,
@@ -38,7 +38,7 @@ test('Checks if the rover initial position includes the correct data type of val
     )
   ).toEqual(correctRoverCoordsResults);
 });
-test('Checks if the rover initial position includes the correct data type of values -  returns false', () => {
+test('Checks if the rover initial position includes the correct data type of values - returns false', () => {
   expect(
     checkCoords(
       incorrectRoverCoordsValues,

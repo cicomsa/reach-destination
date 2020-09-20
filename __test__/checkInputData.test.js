@@ -35,7 +35,7 @@ const resultIncorrectInputTypes = [
 test('Checks the type of input data - returns correct data', () => {
   expect(checkInputData(correctInputTypes)).toEqual(resultCorrectInputTypes);
 });
-test('Checks the type of input data - returns correct data', () => {
+test('Checks the type of input data - returns incorrect data', () => {
   expect(checkInputData(incorrectInputTypes)).toEqual(
     resultIncorrectInputTypes
   );

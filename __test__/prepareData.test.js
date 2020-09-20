@@ -15,6 +15,6 @@ const result = {
   },
 };
 
-test('Prepares data based on given input', () => {
+test('Checks if the prepareData function returns expected result', () => {
   expect(setData(input)).toEqual(result);
 });
