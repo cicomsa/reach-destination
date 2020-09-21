@@ -1,5 +1,5 @@
-const init = (roverCoors, initialPosition, input) => {
-  const indexHeading = roverCoors.indexOf(initialPosition[2]);
+const init = (roverCoords, initialPosition, input) => {
+  const indexHeading = roverCoords.indexOf(initialPosition[2]);
 
   switch (input) {
     case 'M':
@@ -30,14 +30,14 @@ const init = (roverCoors, initialPosition, input) => {
           ];
       }
     case 'R':
-      const newHeadingR = roverCoors[indexHeading + 1]
-        ? roverCoors[indexHeading + 1]
-        : roverCoors[0];
+      const newHeadingR = roverCoords[indexHeading + 1]
+        ? roverCoords[indexHeading + 1]
+        : roverCoords[0];
       return [initialPosition[0], initialPosition[1], newHeadingR];
     case 'L':
-      const newHeadingL = roverCoors[indexHeading - 1]
-        ? roverCoors[indexHeading - 1]
-        : roverCoors[roverCoors.length - 1];
+      const newHeadingL = roverCoords[indexHeading - 1]
+        ? roverCoords[indexHeading - 1]
+        : roverCoords[roverCoords.length - 1];
       return [initialPosition[0], initialPosition[1], newHeadingL];
   }
 };

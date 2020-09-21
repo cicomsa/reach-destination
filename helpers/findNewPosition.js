@@ -1,14 +1,24 @@
 const findPossibility = require('./findPossibility');
 let possibility;
 
-const init = (roverCoords, roverInstructions, position, i) => {
-  if (i === roverInstructions.length) {
-    return position;
-  } else {
-    possibility = findPossibility(roverCoords, position, roverInstructions[i]);
+const init = (roverCoords, roverInstructions, position, plateauCoords, i) => {
+  if (
+    position[0] > plateauCoords[0] ||
+    position[1] > plateauCoords[1] ||
+    position[0] < 0 ||
+    position[1] < 0
+  )
+    return "Instructions don't match the size of the plateau.";
+  if (i === roverInstructions.length) return position;
 
-    return init(roverCoords, roverInstructions, possibility, i + 1);
-  }
+  possibility = findPossibility(roverCoords, position, roverInstructions[i]);
+  return init(
+    roverCoords,
+    roverInstructions,
+    possibility,
+    plateauCoords,
+    i + 1
+  );
 };
 
 module.exports = init;
