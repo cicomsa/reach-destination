@@ -16,12 +16,14 @@ const init = (input) => {
     roverCoords,
     convertedData.rover_one.instructions,
     convertedData.rover_one.initial_position,
+    roverCoords,
     0
   );
   convertedData.rover_two.final_position = findNewPosition(
     roverCoords,
     convertedData.rover_two.instructions,
     convertedData.rover_two.initial_position,
+    roverCoords,
     0
   );
 
